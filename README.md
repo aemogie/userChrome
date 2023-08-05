@@ -13,7 +13,7 @@ All the source files are available in the [`chrome`](chrome/) folder.
   - Linux: `$HOME/.mozilla/firefox/######.default-release/`
   - MacOS: `Users/[USERNAME]/Library/Application Support/Firefox/Profiles/######.default-release`
   - Windows: `C:\Users\[USERNAME]\AppData\Roaming\Mozilla\Firefox\Profiles\######.default-release`
-4. Copy the `chrome` folder into your profile and restart<sup>1)</sup> Firefox.
+4. Copy the `chrome` folder into your profile and restart Firefox.
 
 ## The folders explained
 
