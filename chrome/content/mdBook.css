@@ -1,5 +1,3 @@
-@import 'hljs.css';
-
 code.hljs {
   --mono-font: var(--font-mono) !important;
   --code-font-size: 1em !important;

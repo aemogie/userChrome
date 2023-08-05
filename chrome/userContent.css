@@ -1,6 +1,7 @@
 @import 'content/about.css';
-@import 'content/devtools.css';
 @import 'content/CodeMirror.css';
+@import 'content/devtools.css';
+@import 'content/hljs.css';
 @import 'content/mdBook.css';
 
 :root {
