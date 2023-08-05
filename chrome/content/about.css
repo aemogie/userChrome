@@ -1,0 +1,89 @@
+@-moz-document regexp("(about:|chrome:\/\/browser\/content\/preferences\/dialogs\/).*") {
+
+	body,
+	window,
+	login-list {
+		min-height: 100vh;
+		background: rgb(var(--ctp-base)) !important;
+		font-family: var(--font-sans) !important;
+	}
+
+	* {
+		--in-content-page-color: rgb(var(--ctp-text));
+		--in-content-text-color: rgb(var(--ctp-text));
+		--in-content-page-background: rgb(var(--ctp-base));
+		--in-content-box-background: rgb(var(--ctp-mantle));
+		--in-content-box-background-odd: rgb(var(--ctp-crust));
+		--in-content-table-background: rgb(var(--ctp-surface0));
+		--in-content-box-info-background: rgb(var(--ctp-surface0)) !important;
+		--in-content-button-background: rgb(var(--ctp-surface0));
+		--in-content-button-background-hover: rgb(var(--ctp-surface1));
+		--in-content-button-background-active: rgb(var(--ctp-surface2));
+		--in-content-box-border-color: rgb(var(--ctp-base));
+		--in-content-border-color: rgb(var(--ctp-base));
+		--brand-color-accent: rgb(var(--ctp-accent));
+		--in-content-accent-color: rgb(var(--ctp-accent));
+		--color-accent-primary: rgb(var(--ctp-accent));
+		--color-accent-primary-hover: rgba(var(--ctp-accent), 0.75);
+		--in-content-primary-button-background-hover: rgba(var(--ctp-accent), 0.75);
+		--in-content-primary-button-background-active: rgba(var(--ctp-accent), 0.75);
+		--in-content-primary-button-background: rgb(var(--ctp-accent));
+		--card-outline-color: rgb(var(--ctp-surface1));
+		--card-shadow: 0 1px 4px rgba(var(--ctp-surface1), 0.1);
+		--color-canvas: rgb(var(--ctp-base));
+		--prefs-table-border: none;
+	}
+
+	* {
+		--card-shadow-hover: var(--card-shadow), 0 0 0 5px var(--card-outline-color);
+		--in-content-table-header-background: var(--in-content-primary-button-background);
+		--in-content-button-text-color: var(--in-content-text-color);
+		--in-content-button-text-color-hover: var(--in-content-text-color);
+		--in-content-button-text-color-active: var(--in-content-button-text-color-hover);
+		--in-content-accent-color-active: var(--in-content-primary-button-background-hover);
+		--focus-outline-color: var(--color-accent-primary);
+		--in-content-focus-outline-color: var(--focus-outline-color);
+		--focus-outline: var(--focus-outline-width) solid var(--focus-outline-color);
+		--in-content-focus-outline: var(--focus-outline);
+		--in-content-link-color: var(--in-content-primary-button-background);
+		--in-content-link-color-hover: var(--in-content-primary-button-background-hover);
+		--in-content-link-color-active: var(--in-content-primary-button-background-active);
+		--message-bar-background-color: var(--in-content-box-info-background);
+		--in-content-link-color-hover: var(--in-content-primary-button-background-hover);
+		--in-content-table-border-color: var(--in-content-box-border-color);
+		--checkbox-checked-bgcolor: var(--in-content-primary-button-background);
+		--checkbox-checked-hover-bgcolor: var(--in-content-primary-button-background-hover);
+		--in-content-link-color-visited: var(--in-content-link-color);
+		--in-content-item-selected: var(--in-content-primary-button-background);
+		--in-content-item-hover: color-mix(in srgb, var(--in-content-primary-button-background) 20%, transparent);
+		--checkbox-checked-active-bgcolor: var(--in-content-primary-button-background-active);
+	}
+
+	table {
+		font-family: inherit !important;
+	}
+
+	td button,
+	.action-box button,
+	.info-box-container button {
+		--in-content-button-background: rgb(var(--ctp-surface1));
+		--in-content-button-background-hover: rgb(var(--ctp-surface2));
+		--in-content-button-background-active: rgb(var(--ctp-overlay0));
+	}
+
+	.privacy-detailedoption:not(.selected) {
+		background-color: var(--in-content-box-info-background) !important;
+	}
+
+	dialog,
+	.dialogBox,
+	:root[dialogroot],
+	:host(dialog) {
+		--in-content-page-background: rgb(var(--ctp-base)) !important;
+		background: var(--in-content-page-background);
+	}
+
+	.timeline>* {
+		--in-content-border-color: rgb(var(--ctp-overlay1));
+	}
+}

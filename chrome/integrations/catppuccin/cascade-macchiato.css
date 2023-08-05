@@ -1,0 +1,196 @@
+/*---+---+---+---+---+---+---+
+ | C | O | L | O | U | R | S |
+ +---+---+---+---+---+---+---*/
+
+:root {
+  --latte-rosewater: #dc8a78;
+  --macchiato-rosewater: #f4dbd6;
+  --latte-flamingo: #dd7878;
+  --macchiato-flamingo: #f0c6c6;
+  --latte-pink: #ea76cb;
+  --macchiato-pink: #f5bde6;
+  --latte-mauve: #8839ef;
+  --macchiato-mauve: #c6a0f6;
+  --latte-red: #d20f39;
+  --macchiato-red: #ed8796;
+  --latte-maroon: #e64553;
+  --macchiato-maroon: #ee99a0;
+  --latte-peach: #fe640b;
+  --macchiato-peach: #f5a97f;
+  --latte-yellow: #df8e1d;
+  --macchiato-yellow: #eed49f;
+  --latte-green: #40a02b;
+  --macchiato-green: #a6da95;
+  --latte-teal: #179299;
+  --macchiato-teal: #8bd5ca;
+  --latte-sky: #04a5e5;
+  --macchiato-sky: #91d7e3;
+  --latte-sapphire: #209fb5;
+  --macchiato-sapphire: #7dc4e4;
+  --latte-blue: #1e66f5;
+  --macchiato-blue: #8aadf4;
+  --latte-lavender: #7287fd;
+  --macchiato-lavender: #b7bdf8;
+  --latte-text: #4c4f69;
+  --macchiato-text: #cad3f5;
+  --latte-subtext1: #5c5f77;
+  --macchiato-subtext1: #b8c0e0;
+  --latte-subtext0: #6c6f85;
+  --macchiato-subtext0: #a5adcb;
+  --latte-overlay2: #7c7f93;
+  --macchiato-overlay2: #939ab7;
+  --latte-overlay1: #8c8fa1;
+  --macchiato-overlay1: #8087a2;
+  --latte-overlay0: #9ca0b0;
+  --macchiato-overlay0: #6e738d;
+  --latte-surface2: #acb0be;
+  --macchiato-surface2: #5b6078;
+  --latte-surface1: #bcc0cc;
+  --macchiato-surface1: #494d64;
+  --latte-surface0: #ccd0da;
+  --macchiato-surface0: #363a4f;
+  --latte-base: #eff1f5;
+  --macchiato-base: #24273a;
+  --latte-mantle: #e6e9ef;
+  --macchiato-mantle: #1e2030;
+  --latte-crust: #dce0e8;
+  --macchiato-crust: #181926;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+
+    /* These colours are (mainly) used by the
+     Container Tabs Plugin */
+    --uc-identity-colour-blue: #8AADF4;
+    --uc-identity-colour-turquoise: #8BD5CA;
+    --uc-identity-colour-green: #A6DA95;
+    --uc-identity-colour-yellow: #EED49F;
+    --uc-identity-colour-orange: #F5A97F;
+    --uc-identity-colour-red: #ED8796;
+    --uc-identity-colour-pink: #F5BDE6;
+    --uc-identity-colour-purple: #C6A0F6;
+
+    /*  Cascades main Colour Scheme */
+    --uc-base-colour: #24273A;
+    --uc-highlight-colour: #1E2030;
+    --uc-inverted-colour: #CAD3F5;
+    --uc-muted-colour: #6E738D;
+    --uc-accent-colour: var(--uc-identity-colour-purple);
+
+  }
+}
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+
+    /* These colours are (mainly) used by the
+     Container Tabs Plugin */
+    --uc-identity-colour-blue: #1E66F5;
+    --uc-identity-colour-turquoise: #179299;
+    --uc-identity-colour-green: #40A02B;
+    --uc-identity-colour-yellow: #DF8E1D;
+    --uc-identity-colour-orange: #FE640B;
+    --uc-identity-colour-red: #D20F39;
+    --uc-identity-colour-pink: #D20F39;
+    --uc-identity-colour-purple: #8839EF;
+
+    /*  Cascades main Colour Scheme */
+    --uc-base-colour: #EFF1F5;
+    --uc-highlight-colour: #DCE0E8;
+    --uc-inverted-colour: #4C4F69;
+    --uc-muted-colour: #9CA0B0;
+    --uc-accent-colour: var(--uc-identity-colour-purple);
+
+  }
+}
+
+
+
+
+
+
+/* Down here I'm just reassigning variables based on the colours set above.
+   Feel free to play around with these but there is no editing necessary below this line. c:
+   */
+
+:root {
+
+  --lwt-frame: var(--uc-base-colour) !important;
+  --lwt-accent-color: var(--lwt-frame) !important;
+  --lwt-text-color: var(--uc-inverted-colour) !important;
+
+  --toolbar-field-color: var(--uc-inverted-colour) !important;
+
+  --toolbar-field-focus-color: var(--uc-inverted-colour) !important;
+  --toolbar-field-focus-background-color: var(--uc-highlight-colour) !important;
+  --toolbar-field-focus-border-color: transparent !important;
+
+  --toolbar-field-background-color: var(--lwt-frame) !important;
+  --lwt-toolbar-field-highlight: var(--uc-inverted-colour) !important;
+  --lwt-toolbar-field-highlight-text: var(--uc-highlight-colour) !important;
+  --urlbar-popup-url-color: var(--uc-accent-colour) !important;
+
+  --lwt-tab-text: var(--lwt-text-colour) !important;
+
+  --lwt-selected-tab-background-color: var(--uc-highlight-colour) !important;
+
+  --toolbar-bgcolor: var(--lwt-frame) !important;
+  --toolbar-color: var(--lwt-text-color) !important;
+  --toolbarseparator-color: var(--uc-accent-colour) !important;
+  --toolbarbutton-hover-background: var(--uc-highlight-colour) !important;
+  --toolbarbutton-active-background: var(--toolbarbutton-hover-background) !important;
+
+  --lwt-sidebar-background-color: var(--lwt-frame) !important;
+  --sidebar-background-color: var(--lwt-sidebar-background-color) !important;
+
+  --urlbar-box-bgcolor: var(--uc-highlight-colour) !important;
+  --urlbar-box-text-color: var(--uc-muted-colour) !important;
+  --urlbar-box-hover-bgcolor: var(--uc-highlight-colour) !important;
+  --urlbar-box-hover-text-color: var(--uc-inverted-colour) !important;
+  --urlbar-box-focus-bgcolor: var(--uc-highlight-colour) !important;
+
+}
+
+
+
+.identity-color-blue {
+  --identity-tab-color: var(--uc-identity-colour-blue) !important;
+  --identity-icon-color: var(--uc-identity-colour-blue) !important;
+}
+
+.identity-color-turquoise {
+  --identity-tab-color: var(--uc-identity-colour-turquoise) !important;
+  --identity-icon-color: var(--uc-identity-colour-turquoise) !important;
+}
+
+.identity-color-green {
+  --identity-tab-color: var(--uc-identity-colour-green) !important;
+  --identity-icon-color: var(--uc-identity-colour-green) !important;
+}
+
+.identity-color-yellow {
+  --identity-tab-color: var(--uc-identity-colour-yellow) !important;
+  --identity-icon-color: var(--uc-identity-colour-yellow) !important;
+}
+
+.identity-color-orange {
+  --identity-tab-color: var(--uc-identity-colour-orange) !important;
+  --identity-icon-color: var(--uc-identity-colour-orange) !important;
+}
+
+.identity-color-red {
+  --identity-tab-color: var(--uc-identity-colour-red) !important;
+  --identity-icon-color: var(--uc-identity-colour-red) !important;
+}
+
+.identity-color-pink {
+  --identity-tab-color: var(--uc-identity-colour-pink) !important;
+  --identity-icon-color: var(--uc-identity-colour-pink) !important;
+}
+
+.identity-color-purple {
+  --identity-tab-color: var(--uc-identity-colour-purple) !important;
+  --identity-icon-color: var(--uc-identity-colour-purple) !important;
+}

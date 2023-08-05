@@ -1,54 +1,62 @@
 /* remove gap after pinned tabs */
-#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
-  > #tabbrowser-arrowscrollbox
-  > .tabbrowser-tab[first-visible-unpinned-tab] { margin-inline-start: 0 !important; }
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])>#tabbrowser-arrowscrollbox>.tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start: 0 !important;
+}
 
 
 /* Hides the list-all-tabs button*/
-#alltabs-button { display: var(--uc-show-all-tabs-button) !important; }
-
+#alltabs-button {
+  display: var(--uc-show-all-tabs-button) !important;
+}
 
 /* remove tab shadow */
-.tabbrowser-tab
-  >.tab-stack
-  > .tab-background { box-shadow: none !important;  }
+.tabbrowser-tab>.tab-stack>.tab-background {
+  box-shadow: none !important;
+}
 
 
 /* multi tab selection */
-#tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([multiselected])
-  > .tab-stack
-  > .tab-background:-moz-lwtheme { outline-color: var(--toolbarseparator-color) !important; }
+#tabbrowser-tabs:not([noshadowfortests]) .tabbrowser-tab:is([multiselected])>.tab-stack>.tab-background:-moz-lwtheme {
+  outline-color: var(--toolbarseparator-color) !important;
+}
 
 
 
 
 
 /* tab close button options */
-.tabbrowser-tab:not([pinned]) .tab-close-button { display: var(--show-tab-close-button) !important; }
-.tabbrowser-tab:not([pinned]):hover .tab-close-button { display: var(--show-tab-close-button-hover) !important }
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+  display: var(--show-tab-close-button) !important;
+}
+
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  display: var(--show-tab-close-button-hover) !important
+}
 
 
 
 
 
 /* adaptive tab width */
-.tabbrowser-tab[selected][fadein]:not([pinned]) { max-width: var(--uc-active-tab-width) !important; }
-.tabbrowser-tab[fadein]:not([selected]):not([pinned]) { max-width: var(--uc-inactive-tab-width) !important; }
+.tabbrowser-tab[selected][fadein]:not([pinned]) {
+  max-width: var(--uc-active-tab-width) !important;
+}
+
+.tabbrowser-tab[fadein]:not([selected]):not([pinned]) {
+  max-width: var(--uc-inactive-tab-width) !important;
+}
 
 
 
 
 
 /* container tabs indicator */
-.tabbrowser-tab[usercontextid]
-  > .tab-stack
-  > .tab-background
-  > .tab-context-line {
+.tabbrowser-tab[usercontextid]>.tab-stack>.tab-background>.tab-context-line {
 
-    margin: -1px var(--container-tabs-indicator-margin) 0 var(--container-tabs-indicator-margin) !important;
-    height: 1px !important;
+  margin: -1px var(--container-tabs-indicator-margin) 0 var(--container-tabs-indicator-margin) !important;
+  height: 1px !important;
 
-    box-shadow: var(--uc-identity-glow) var(--identity-tab-color) !important;
+  box-shadow: var(--uc-identity-glow) var(--identity-tab-color) !important;
 
 }
 
@@ -57,8 +65,13 @@
 
 
 /* show favicon when media is playing but tab is hovered */
-.tab-icon-image:not([pinned]) { opacity: 1 !important; }
+.tab-icon-image:not([pinned]) {
+  opacity: 1 !important;
+}
 
+/* .tab-icon-image {
+  filter: brightness(1.3) saturate(0.7);
+} */
 
 /* Makes the speaker icon to always appear if the tab is playing (not only on hover) */
 .tab-icon-overlay:not([crashed]),
@@ -69,7 +82,8 @@
 
   padding: 1.5px !important;
   inset-inline-end: -8px !important;
-  width: 16px !important; height: 16px !important;
+  width: 16px !important;
+  height: 16px !important;
 
   border-radius: 10px !important;
 
@@ -81,7 +95,8 @@
 
   stroke: transparent !important;
   background: transparent !important;
-  opacity: 1 !important; fill-opacity: 0.8 !important;
+  opacity: 1 !important;
+  fill-opacity: 0.8 !important;
 
   color: currentColor !important;
 
@@ -100,7 +115,9 @@
 }
 
 
-.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) { margin-inline-end: 9.5px !important; }
+.tab-icon-overlay:not([pinned], [sharing], [crashed]):is([soundplaying], [muted], [activemedia-blocked]) {
+  margin-inline-end: 9.5px !important;
+}
 
 
 .tabbrowser-tab:not([image]) .tab-icon-overlay:not([pinned], [sharing], [crashed]) {
@@ -141,10 +158,14 @@
 /* speaker icon colour fix */
 #TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying],
 #TabsToolbar .tab-icon-overlay:not([crashed])[muted],
-#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked] { color: var(--toolbar-color) !important; }
+#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked] {
+  color: var(--toolbar-color) !important;
+}
 
 
 /* speaker icon colour fix on hover */
 #TabsToolbar .tab-icon-overlay:not([crashed])[soundplaying]:hover,
 #TabsToolbar .tab-icon-overlay:not([crashed])[muted]:hover,
-#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { color: var(--toolbar-bgcolor) !important; }
+#TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover {
+  color: var(--toolbar-bgcolor) !important;
+}

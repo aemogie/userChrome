@@ -1,0 +1,154 @@
+@-moz-document url-prefix("chrome://devtools/") {
+  body {
+    font-family: var(--font-sans);
+  }
+
+  .devtools-monospace {
+    --theme-body-background: rgb(var(--ctp-base));
+    --theme-selection-color: rgb(var(--ctp-text));
+    --theme-text-color-strong: rgb(var(--ctp-text));
+    --theme-selection-background: rgba(var(--ctp-surface2), 40%);
+    --theme-selection-background-hover: rgba(var(--ctp-surface2), 40%);
+    --theme-highlight-blue: rgb(var(--ctp-blue));
+    --theme-highlight-red: rgb(var(--ctp-red));
+    --theme-highlight-purple: rgb(var(--ctp-mauve));
+    --theme-highlight-green: rgb(var(--ctp-green));
+    --theme-highlight-comment: rgb(var(--ctp-overlay0));
+    --markup-hidden-tag-color: rgba(var(--ctp-mauve), 0.5);
+    --markup-hidden-attr-value-color: rgba(var(--ctp-green), 0.5);
+    --markup-hidden-attr-name-color: rgba(var(--ctp-blue), 0.5);
+    --markup-hidden-punctuation-color: rgb(var(--ctp-overlay0));
+  }
+
+  * {
+    --theme-body-background: rgb(var(--ctp-crust));
+    --theme-body-color: rgb(var(--ctp-text));
+    --theme-sidebar-background: rgb(var(--ctp-mantle));
+    --theme-splitter-color: rgb(var(--ctp-surface0));
+    --theme-tab-toolbar-background: rgb(var(--ctp-mantle));
+    --theme-toolbar-background: rgb(var(--ctp-crust));
+    --tab-line-selected-color: rgb(var(--ctp-accent));
+    --tab-line-hover-color: rgba(var(--ctp-accent), 0.5);
+    --toolbarbutton-hover-background: rgb(var(--ctp-base));
+    --theme-toolbar-hover: rgb(var(--ctp-crust));
+    --rule-header-background-color: rgb(var(--ctp-crust));
+    --theme-accordion-header-hover: rgb(var(--ctp-base));
+  }
+
+  .devtools-monospace {
+    --monospace-font-family: var(--font-mono);
+    --theme-code-font-size: 14px;
+  }
+
+  .editor.comment:not(.doctype) {
+    color: var(--theme-highlight-comment) !important;
+  }
+
+  .editor.comment.doctype {
+    color: rgb(var(--ctp-peach));
+  }
+
+  .editor .tag {
+    color: var(--theme-highlight-purple) !important;
+  }
+
+  .editor .theme-fg-color1 {
+    color: var(--theme-highlight-blue) !important;
+  }
+
+  .editor .theme-fg-color2 {
+    color: var(--theme-highlight-green) !important;
+  }
+
+  .editor .theme-fg-color3 {
+    color: var(--theme-highlight-purple) !important;
+  }
+
+  .not-displayed {
+    opacity: 0.5;
+  }
+
+  .ruleview-propertyname,
+  .ruleview-propertyvalue {
+    border-bottom: none !important;
+  }
+
+  .ruleview-propertyname {
+    color: rgb(var(--ctp-text)) !important;
+  }
+
+  .ruleview-propertyvalue {
+    color: rgb(var(--ctp-blue)) !important;
+  }
+
+  .ruleview-variable {
+    text-decoration: underline dotted;
+  }
+
+  span:has(>.ruleview-variable) {
+    color: rgb(var(--ctp-green)) !important;
+  }
+
+  .ruleview-color {
+    color: rgb(var(--ctp-peach)) !important;
+  }
+
+  .ruleview-overridden {
+    opacity: 0.5;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 85%;
+  }
+
+  .ruleview-enableproperty {
+    float: right !important;
+    left: 0 !important;
+  }
+
+  /*   .ruleview-overridden .ruleview-enableproperty {
+    display: none !important;
+  } */
+
+  .ruleview-namecontainer {
+    margin-left: 0 !important;
+  }
+
+  .devtools-searchbox:focus-within,
+  .devtools-textinput:focus,
+  .devtools-searchinput:focus,
+  .devtools-filterinput:focus {
+    border-color: rgb(var(--ctp-accent)) !important;
+    outline: none;
+  }
+
+  .devtools-button::before {
+    font-family: var(--font-sans);
+  }
+}
+
+@-moz-document url("about:devtools-toolbox") {
+  * {
+    --theme-tab-toolbar-background: rgb(var(--ctp-mantle));
+    --theme-toolbar-hover: rgb(var(--ctp-base));
+    --theme-popup-background: rgb(var(--ctp-surface0));
+    --theme-popup-dimmed: rgb(var(--ctp-surface1));
+    --theme-toolbar-color: rgb(var(--ctp-text));
+    --theme-toolbar-selected-color: rgb(var(--ctp-text));
+    --tab-line-selected-color: rgb(var(--ctp-accent));
+    --tab-line-hover-color: rgba(var(--ctp-accent), 0.5);
+  }
+
+  * {
+    --theme-arrowpanel-background: var(--theme-popup-background);
+    --theme-arrowpanel-dimmed: var(--theme-popup-dimmed);
+  }
+
+  .devtools-tab-label,
+  .command {
+    font-family: var(--font-sans);
+  }
+
+  .devtools-tab.selected {
+    background: rgb(var(--ctp-surface0));
+  }
+}

@@ -4,10 +4,11 @@
 
 
 :root {
+  font-family: 'Iosevka Aile' !important;
 
   /*  Global Border Radius
    *  applied to ALL UI elements
-   */ --uc-border-radius: 0px;
+   */ --uc-border-radius: 20px;
 
 
   /*  The distance the Statuspanel floats
@@ -81,7 +82,7 @@
   /*  Firefox can be a little wonky with the vertical
    *  URL Bar placement. Change this variable to adapt
    *  to this when necessary.
-   */ --uc-urlbar-top-spacing: 1px;
+   */ --uc-urlbar-top-spacing: 0;
 
 }
 
@@ -97,7 +98,8 @@
   /* Only hides permission items */
   #identity-permission-box { display: none !important; }
   /* Hides encryption AND permission items */
-  /* #identity-box { display: none !important } */
+/*   #identity-box { display: none !important } */
+/* .urlbar-input-box #urlbar-input { margin-left: 10px !important; } */
 
 /* Hide everything BUT the zoom indicator within the URL Bar */
 #page-action-buttons > :not(#urlbar-zoom-button) { display: none !important; }
